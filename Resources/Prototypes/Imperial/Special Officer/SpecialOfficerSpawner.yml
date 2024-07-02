@@ -28,6 +28,9 @@
     - type: RandomHumanoidAppearance
       randomizeName: false
     - type: MindShield
+    - type: NpcFactionMember
+      factions:
+      - DeathSquad # Кастомная фракция Imperial Space
 
 - type: dataset ## Датасет, чтобы ОСО начинался с офицер
   id: SpecialOfficerName
