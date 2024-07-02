@@ -27,6 +27,7 @@
       prototypes: [ SpecialOfficerGear ]
     - type: RandomHumanoidAppearance
       randomizeName: false
+    - type: MindShield
 
 - type: dataset ## Датасет, чтобы ОСО начинался с офицер
   id: SpecialOfficerName
