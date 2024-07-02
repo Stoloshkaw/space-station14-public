@@ -40,11 +40,6 @@
   - type: Clothing
     sprite: Clothing/Shoes/Boots/jackboots.rsi
   - type: Matchbox
-  - type: Storage
-    whitelist:
-      tags:
-        - Knife
-        - Sidearm
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepSpecialOfficer
