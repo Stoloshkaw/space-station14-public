@@ -4,7 +4,7 @@ admin-player-actions-kick = Кикнуть
 admin-player-actions-ban = Забанить
 admin-player-actions-ahelp = AHelp
 admin-player-actions-respawn = Респавн
-admin-player-actions-spawn = заспавнить здесь
+admin-player-actions-spawn = Заспавнить здесь
 admin-player-spawn-failed = Не удалось найти действительные координаты
 
 admin-player-actions-clone = Клонировать

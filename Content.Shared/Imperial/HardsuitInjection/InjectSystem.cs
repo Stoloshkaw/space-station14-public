@@ -199,7 +199,7 @@ public sealed class InjectSystem : EntitySystem
         var args = new DoAfterArgs(EntityManager, user, time, new ToggleSlotDoAfterEvent(), item, wearer, item)
         {
             BreakOnDamage = true,
-            BreakOnTargetMove = true,
+            BreakOnMove = true,
             DistanceThreshold = 2,
         };
 

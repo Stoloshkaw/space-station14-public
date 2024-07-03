@@ -95,14 +95,10 @@ public sealed class MagicMirrorSystem : EntitySystem
         _doAfterSystem.TryStartDoAfter(new DoAfterArgs(EntityManager, user, component.SelectSlotTime, doAfter, uid, target: target, used: uid)
         {
             DistanceThreshold = SharedInteractionSystem.InteractionRange,
-            BreakOnTargetMove = true,
             BreakOnDamage = true,
+            BreakOnMove = true,
             BreakOnHandChange = false,
-            BreakOnUserMove = true,
-            BreakOnWeightlessMove = false,
-            NeedHand = true,
-            CancelDuplicate = true, // Imperial Fix
-            DuplicateCondition = DuplicateConditions.SameTool // Imperial Fix
+            NeedHand = true
         }, out var doAfterId);
 
         component.DoAfter = doAfterId;
@@ -153,14 +149,10 @@ public sealed class MagicMirrorSystem : EntitySystem
 
         _doAfterSystem.TryStartDoAfter(new DoAfterArgs(EntityManager, user, component.ChangeSlotTime, doAfter, uid, target: target, used: uid)
         {
-            BreakOnTargetMove = true,
             BreakOnDamage = true,
+            BreakOnMove = true,
             BreakOnHandChange = false,
-            BreakOnUserMove = true,
-            BreakOnWeightlessMove = false,
-            NeedHand = true,
-            CancelDuplicate = true, // Imperial Fix
-            DuplicateCondition = DuplicateConditions.SameTool // Imperial Fix
+            NeedHand = true
         }, out var doAfterId);
 
         component.DoAfter = doAfterId;
@@ -210,14 +202,9 @@ public sealed class MagicMirrorSystem : EntitySystem
         _doAfterSystem.TryStartDoAfter(new DoAfterArgs(EntityManager, user, component.RemoveSlotTime, doAfter, uid, target: target, used: uid)
         {
             DistanceThreshold = SharedInteractionSystem.InteractionRange,
-            BreakOnTargetMove = true,
             BreakOnDamage = true,
             BreakOnHandChange = false,
-            BreakOnUserMove = true,
-            BreakOnWeightlessMove = false,
-            NeedHand = true,
-            CancelDuplicate = true, // Imperial Fix
-            DuplicateCondition = DuplicateConditions.SameTool // Imperial Fix
+            NeedHand = true
         }, out var doAfterId);
 
         component.DoAfter = doAfterId;
@@ -269,14 +256,10 @@ public sealed class MagicMirrorSystem : EntitySystem
 
         _doAfterSystem.TryStartDoAfter(new DoAfterArgs(EntityManager, message.Session.AttachedEntity.Value, component.AddSlotTime, doAfter, uid, target: component.Target.Value, used: uid)
         {
-            BreakOnTargetMove = true,
             BreakOnDamage = true,
+            BreakOnMove = true,
             BreakOnHandChange = false,
-            BreakOnUserMove = true,
-            BreakOnWeightlessMove = false,
-            NeedHand = true,
-            CancelDuplicate = true, // Imperial Fix
-            DuplicateCondition = DuplicateConditions.SameTool // Imperial Fix
+            NeedHand = true
         }, out var doAfterId);
 
         component.DoAfter = doAfterId;

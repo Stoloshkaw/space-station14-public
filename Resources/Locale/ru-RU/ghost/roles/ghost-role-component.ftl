@@ -58,8 +58,8 @@ ghost-role-information-salvage-carp-description = Защищайте сокро�
 ghost-role-information-sentient-carp-name = Разумный карп
 ghost-role-information-sentient-carp-description = Помогите дракону наводнить станцию карпами!
 
-ghost-role-information-willow-name = Кенгуру Уиллоу
-ghost-role-information-willow-description = Вы кенгуру по имени Уиллоу! Уиллоу любит бокс.
+ghost-role-information-willow-name = Кенгуру Вильям
+ghost-role-information-willow-description = Вы кенгуру по имени Вильям! Вильям любит бокс.
 
 ghost-role-information-space-tick-name = Космический клещ
 ghost-role-information-space-tick-description = Устройте хаос на станции!
