@@ -28,6 +28,7 @@
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellCompactDefib
         disableEject: true
+        locked: true
 
 - type: entity
   name: compact defib power cell

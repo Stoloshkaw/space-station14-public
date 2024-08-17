@@ -1,4 +1,4 @@
-- type: cargoProduct
+ - type: cargoProduct
   id: ServiceJanitorial
   icon:
     sprite: Objects/Specific/Janitorial/janitorial.rsi

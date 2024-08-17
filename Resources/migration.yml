@@ -8,6 +8,13 @@
 # WallSolid: Window
 # Table: null
 
+#IMPERIAL
+# 2024-05-27 Imperial Space TFG works
+DeliciousPresentableRag: PresentableRag
+WinterBox: null
+ToughguysSpawner: ToughguysPlushieSpawner
+ClothingBackpackBackbow: ClothingBackpackMaidBackbow
+
 # 2023-07-03
 ClothingHeadHelmetHelmet: ClothingHeadHelmetBasic
 ClothingHeadHelmetHelmetOld: ClothingHeadHelmetBasic
@@ -89,10 +96,10 @@ GeneratorPlasmaMachineCircuitboard: PortableGeneratorPacmanMachineCircuitboard
 GeneratorUraniumMachineCircuitboard: PortableGeneratorSuperPacmanMachineCircuitboard
 
 # 2023-12-10
-#SpawnPointSeniorResearcher: null # imperial nuh uh
-#SpawnPointSeniorOfficer: null # imperial nuh uh
-#SpawnPointSeniorEngineer: null # imperial nuh uh
-#SpawnPointSeniorPhysician: null # imperial nuh uh
+SpawnPointSeniorResearcher: null
+SpawnPointSeniorOfficer: null
+SpawnPointSeniorEngineer: null
+SpawnPointSeniorPhysician: null
 
 # 2023-12-12
 #No this is not the CMO hardsuit, their prototype IDs were just confusingly similar
@@ -158,7 +165,7 @@ TransmitterSubspaceStockPart: null
 ClothingHeadHatHoodRad: null
 
 # 2024-01-12
-## SpaceMedipen: null Imperial
+SpaceMedipen: null
 
 # 2024-01-18
 ClothingHeadHelmetVoidParamed: null
@@ -247,8 +254,5 @@ ImprovisedExplosive: FireBomb
 ImprovisedExplosiveEmpty: FireBombEmpty
 ImprovisedExplosiveFuel: FireBombFuel
 
-# 2024-05-27 Imperial Space TFG works
-DeliciousPresentableRag: PresentableRag
-WinterBox: null
-ToughguysSpawner: ToughguysPlushieSpawner
-ClothingBackpackBackbow: ClothingBackpackMaidBackbow
+# 2024-03-21
+RPED: null

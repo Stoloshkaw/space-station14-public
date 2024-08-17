@@ -22,8 +22,11 @@ admin-notes-hide = Скрыть
 admin-notes-delete-confirm = Вы уверены?
 admin-notes-edited = Последнее изменение от {$author} в {$date}
 admin-notes-unbanned = Разбанил {$admin} в {$date}
-admin-notes-message-window-title = Внимание!
-admin-notes-message-admin = Новое сообщение от {$admin}, добавлено в {$date}
+admin-notes-message-desc = [color=white]Вы получили { $count ->
+    [1] сообщение от администрации
+    *[other] сообщений от администрации
+} с последнего момента вашего захода на сервер [/color]
+admin-notes-message-admin = From [bold]{ $admin }[/bold], written on { TOSTRING($date, "f") }:
 admin-notes-message-wait = Кнопка будет доступна через {$time} секунд.
 admin-notes-message-accept = Скрыть навсегда
 admin-notes-message-dismiss = Скрыть временно
@@ -67,6 +70,7 @@ admin-notes-verb-text = Заметки
 # Watchlist and message login
 admin-notes-watchlist = Наблюдение над {$player}: {$message}
 admin-notes-new-message = Вы получили админ сообщение от {$admin}: {$message}
+admin-notes-fallback-admin-name = [System]
 
 # Admin remarks
 admin-remarks-command-description = Открыть страницу админ замечаний

@@ -9,7 +9,7 @@
     drawdepth: SmallMobs
     sprite: Imperial/HamletOps/hamlet-agent.rsi
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
+    - map: ["enum.DamageStateVisualLayers.Base", "movement"]
       state: hamster-0
   - type: GhostRole
     makeSentient: true

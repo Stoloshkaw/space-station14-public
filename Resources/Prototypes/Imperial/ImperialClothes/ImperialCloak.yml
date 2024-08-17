@@ -15,6 +15,9 @@
   components:
   - type: Sprite
     sprite: Imperial/ImperialClothes/hoscloakformal.rsi
+  - type: StealTarget
+    stealGroup: HeadCloak
+
 
 - type: entity
   parent: ClothingNeckBase

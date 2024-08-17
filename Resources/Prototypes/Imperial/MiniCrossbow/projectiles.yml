@@ -12,9 +12,9 @@
   - type: Sprite
     noRot: false
     sprite: Imperial/MiniCrossbow.rsi
-    color: "#228B22"
+    color: "#FFFFFF"
     layers:
-    - state: crossbow-bolt
+    - state: cbbolt
       shader: unshaded
   - type: Physics
   - type: Fixtures

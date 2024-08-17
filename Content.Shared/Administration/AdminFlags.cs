@@ -94,12 +94,10 @@
         /// </summary>
         MassBan = 1 << 15,
 
-        //Imperial Call ert command start
         /// <summary>
-        ///     Lest you spawn ERT by command.
+        /// Allows you to remain hidden from adminwho except to other admins with this flag.
         /// </summary>
-        SpawnErt = 1 << 16,
-        //Imperial Call ert command end
+        Stealth = 1 << 16,
 
         /// <summary>
         ///     Dangerous host permissions like scsi.
