@@ -1,0 +1,54 @@
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitStormtrooper
+  name: stormtrooper hardsuit
+  suffix: империя
+  description: a classic stormtrooper suit! Helmet included
+  components:
+  - type: Item
+    size: Huge
+  - type: Sprite
+    sprite: Imperial/StarWars/stormtrooper.rsi
+  - type: Clothing
+    sprite: Imperial/StarWars/stormtrooper.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.04
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    coefficient: 0.01
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.25
+        Slash: 0.25
+        Piercing: 0.25
+        Shock: 0.25
+        Caustic: 0.7
+        Radiation: 0.1
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHardsuitStormTrooper
+
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHardsuitStormTrooper
+  noSpawn: true
+  name: stormtrooper hardsuit helmet
+  suffix: империя
+  description: helmet with anti-guidance system
+  components:
+  - type: Item
+    size: Normal
+  - type: Sprite
+    sprite: Imperial/StarWars/helmet2.rsi
+  - type: Clothing
+    sprite: Imperial/StarWars/helmet2.rsi
+  - type: PointLight
+    color: "#FFFFFF"
+  - type: PressureProtection
+    highPressureMultiplier: 0.1
+    lowPressureMultiplier: 1000
