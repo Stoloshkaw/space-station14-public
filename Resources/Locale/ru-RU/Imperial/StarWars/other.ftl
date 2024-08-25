@@ -1,0 +1,14 @@
+ent-BannerStarWarsImperial = знамя Империи
+    .desc = будь горд Империей!
+ent-PlushieStormTrooper = плюшевый штурмовик
+    .desc = научи меня стрелять UwU
+ent-StarPoster = Слава Империи!
+    .desc = будь горд Империей!
+ent-StarPosterSith = Переходи на тёмную сторону!
+    .desc = тёмная сторона силы победит!
+ent-StarPosterStormtrooper = Клон-штурмовик
+    .desc = сначала целься, а потом стреляй.
+ent-WeaponStarWarsLaserBlaster = световой бластер
+    .desc = стреляет с почти световой скоростью
+ent-AirlockStarWars = шлюз имперского шаттла
+ent-AirlockStarWarsGlass = стеклянный шлюз имперского шаттла

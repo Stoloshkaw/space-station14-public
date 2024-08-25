@@ -1,0 +1,17 @@
+- type: entity
+  id: AirlockStarWars
+  parent: AirlockHatch
+  suffix: империя
+  name: airlock of the Empire
+  components:
+  - type: AccessReader
+    access: [["NuclearOperative"]]
+
+- type: entity
+  id: AirlockStarWarsGlass
+  parent: AirlockMiningGlass
+  suffix: империя
+  name: glass airlock of the Empire
+  components:
+  - type: AccessReader
+    access: [["NuclearOperative"]]
