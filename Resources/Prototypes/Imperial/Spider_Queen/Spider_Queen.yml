@@ -5,7 +5,7 @@
   components:
   - type: StationEvent
     startDelay: 10
-    earliestStart: 30
+    earliestStart: 15
     minimumPlayers: 35
     weight: 5
     duration: 50
@@ -24,6 +24,10 @@
     name: spider-roy-name
     description: spider-roy-desc
     rules: spider-roy-desc
+    requirements:
+      - !type:DepartmentTimeRequirement
+        department: Security
+        time: 600    
     raffle:
       settings: default        
   - type: GhostRoleMobSpawner
@@ -61,7 +65,7 @@
       0: Alive
       300: Dead
   - type: Stamina
-    excess: 150
+    critThreshold: 150
   - type: DamageStateVisuals
     states:
       Alive:
@@ -131,19 +135,14 @@
     tags:
       - CannotSuicide
       - DoorBumpOpener
-  - type: Tool # Open door from xeno.yml.
-    speed: 1.5
+  - type: Tool
     qualities:
       - Prying
-    useSound:
-      path: /Audio/Items/crowbar.ogg
+    useSound: /Audio/Items/jaws_pry.ogg
   - type: Prying
-    pryPowered: !type:Bool
-        true
-    force: !type:Bool
-      true
-    useSound:
-      path: /Audio/Items/crowbar.ogg
+    speedModifier: 1.5
+    pryPowered: true
+    useSound: /Audio/Items/jaws_pry.ogg
   - type: Barotrauma #Damage
     damage:
       types:
@@ -244,7 +243,7 @@
       - FullAuto
     soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg  
   - type: MovementSpeedModifier 
-    baseWalkSpeed : 4
+    baseWalkSpeed : 3.5
     baseSprintSpeed : 4
   - type: LizardAccent    
 
@@ -268,7 +267,7 @@
       0: Alive
       85: Dead   #HP
   - type: Stamina
-    excess: 150
+    critThreshold: 150
   - type: DamageStateVisuals
     states:
       Alive:
@@ -311,10 +310,8 @@
   - type: Spider
     webPrototype: SpiderWebAbility
   - type: MovementSpeedModifier
-    baseWalkSpeed : 3.9
-    baseSprintSpeed : 3.9
-  - type: ReplacementAccent
-    accent: xeno   
+    baseWalkSpeed : 3
+    baseSprintSpeed : 3.9 
 
 - type: entity
   name: spider hunt
@@ -336,7 +333,7 @@
       0: Alive
       110: Dead   
   - type: Stamina
-    excess: 150
+    critThreshold: 150
   - type: DamageStateVisuals
     states:
       Alive:
@@ -374,13 +371,11 @@
   - type: Spider
     webPrototype: SpiderWebAbility
   - type: MovementSpeedModifier
-    baseWalkSpeed : 3.9
+    baseWalkSpeed : 3
     baseSprintSpeed : 3.9
   - type: AutoImplant
     implants:
     - LightImplantSpiderSpiderHunter
-  - type: ReplacementAccent
-    accent: xeno
     
 - type: entity
   name: spider ghost
@@ -402,7 +397,7 @@
       0: Alive
       100: Dead   
   - type: Stamina
-    excess: 150
+    critThreshold: 150
   - type: DamageStateVisuals
     states:
       Alive:
@@ -456,13 +451,11 @@
       - FullAuto
     soundGunshot: /Audio/Weapons/Xeno/alien_spitacid.ogg  
   - type: MovementSpeedModifier
-    baseWalkSpeed : 3.9
+    baseWalkSpeed : 1.5
     baseSprintSpeed : 3.9
   - type: AutoImplant
     implants:
     - LightImplantSpiderSpiderHunter
-  - type: ReplacementAccent
-    accent: xeno   
     
 - type: entity
   name: spider shooter
@@ -484,7 +477,7 @@
       0: Alive
       80: Dead   
   - type: Stamina
-    excess: 150
+    critThreshold: 150
   - type: DamageStateVisuals
     states:
       Alive:
@@ -537,10 +530,8 @@
     implants:
     - LightImplantSpiderSpiderClown
   - type: MovementSpeedModifier
-    baseWalkSpeed : 3.7
+    baseWalkSpeed : 3
     baseSprintSpeed : 3.7
-  - type: ReplacementAccent
-    accent: xeno
 
 - type: entity
   id: PoisonousAcid 
@@ -576,9 +567,9 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      10: Dead   
+      15: Dead   
   - type: Stamina
-    excess: 150
+    critThreshold: 150
   - type: DamageStateVisuals
     states:
       Alive:
@@ -588,7 +579,7 @@
   - type: PassiveDamage 
     allowedStates:
     - Alive
-    damageCap: 10
+    damageCap: 15
     damage:
       types:
         Heat: -0.5
@@ -605,7 +596,7 @@
     animation: WeaponArcBite
     damage:
       types:
-        Piercing: 2 
+        Piercing: 5
   - type: SolutionContainerManager 
     solutions:
       melee:
@@ -615,10 +606,8 @@
   - type: TimedDespawn 
     lifetime: 20
   - type: MovementSpeedModifier
-    baseWalkSpeed : 4
-    baseSprintSpeed : 4
-  - type: ReplacementAccent
-    accent: xeno
+    baseWalkSpeed : 3.5
+    baseSprintSpeed : 4.5
     
 #Implants
 - type: entity
@@ -839,10 +828,34 @@
       state: crystal_grey
     event: !type:WorldSpawnSpellEvent
       prototypes:
-      - id: CrystalBlue
+      - id: ShardCrystalBlueXeno
         amount: 1
       offset: 0, 1
       speech: action-speech-spell-spider
+      
+- type: entity
+  id: ShardCrystalBlueXeno 
+  parent: ShardCrystalBlue
+  name: spider-spawn-crystal
+  description: spider-spawn-crystal-desc
+  noSpawn: true
+  components:  
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialWebSilk:
+            min: 0
+            max: 0
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy  
 
 - type: entity
   id: ActionSpawnMagicarpSpellSpiderLittle 
@@ -872,7 +885,6 @@
   - type: WorldTargetAction
     useDelay: 8 
     range: 1.5
-    hungerCost: 15 
     itemIconStyle: BigAction
     icon:
       sprite: Structures/Walls/web.rsi
@@ -882,11 +894,9 @@
       useDelay: 25
       prototypes:
       - id: FloorTileItemWebSpiders
-        doAfter: 5
         amount: 1
         useDelay: 25
       offset: 0, 1
-      doAfter: 5
       speech: action-speech-spell-spider
 
 - type: entity
@@ -897,21 +907,15 @@
   - type: WorldTargetAction
     useDelay: 10 
     range: 1.5
-    hungerCost: 15 
     itemIconStyle: BigAction
     icon:
       sprite: Structures/Walls/web.rsi
       state: full
-      useDelay: 30
     event: !type:WorldSpawnSpellEvent
-      useDelay: 25
       prototypes:
       - id: FloorTileItemWebSpiders2
-        doAfter: 5
         amount: 1
-        useDelay: 25
       offset: 0, 1
-      doAfter: 5
       speech: action-speech-spell-spider
 
 - type: entity
@@ -921,7 +925,7 @@
   noSpawn: true
   components:
   - type: WorldTargetAction
-    useDelay: 5 #КД
+    useDelay: 2 #КД
     range: 1.5
     itemIconStyle: BigAction
     icon:
@@ -941,7 +945,7 @@
   noSpawn: true
   components:
   - type: WorldTargetAction
-    useDelay: 20
+    useDelay: 6
     range: 1.5
     itemIconStyle: BigAction
     icon:
@@ -961,7 +965,7 @@
   noSpawn: true
   components:
   - type: WorldTargetAction
-    useDelay: 6 #КД
+    useDelay: 4 #КД
     range: 1.5
     itemIconStyle: BigAction
     icon:
@@ -1114,7 +1118,7 @@
     tags:
     - Egg
     - Trash
-  
+       
 #Web
 - type: entity
   id: SpiderWebUsual 
@@ -1164,7 +1168,7 @@
       thresholds:
       - trigger:
           !type:DamageTrigger
-          damage: 10
+          damage: 30
         behaviors:
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
@@ -1185,8 +1189,8 @@
         Extinguish: [Touch]
     - type: SpiderWebObject
     - type: SpeedModifierContacts
-      walkSpeedModifier: 0.3
-      sprintSpeedModifier: 0.3
+      walkSpeedModifier: 0.25
+      sprintSpeedModifier: 0.25
       ignoreWhitelist:
         components:
             - IgnoreSpiderWeb
@@ -1202,9 +1206,17 @@
     snap:
       - Wall
   components:
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 50
+        behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]  
     - type: SpeedModifierContacts
-      walkSpeedModifier: 0.2
-      sprintSpeedModifier: 0.2
+      walkSpeedModifier: 0.15
+      sprintSpeedModifier: 0.15
       ignoreWhitelist:
         components:
             - IgnoreSpiderWeb
@@ -1224,8 +1236,8 @@
     - type: TimedDespawn
       lifetime: 13
     - type: SpeedModifierContacts
-      walkSpeedModifier: 0.15
-      sprintSpeedModifier: 0.15
+      walkSpeedModifier: 0.1
+      sprintSpeedModifier: 0.1
       ignoreWhitelist:
         components:
             - IgnoreSpiderWeb
@@ -1310,7 +1322,7 @@
   - type: MovedByPressure
   - type: EmitSoundOnCollide
     sound:
-      path: /Audio/Effects/wall_bonk.ogg
+      path: /Audio/Effects/drop.ogg
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Effects/drop.ogg
@@ -1430,7 +1442,7 @@
   name: web
   description: web
   components:
-  - type: Clickable
+  - type: Clickable 
   - type: MeleeSound
     soundGroups:
       Brute:
@@ -1468,4 +1480,4 @@
     base: wall
   - type: Construction
     graph: WebStructures
-    node: wall
+    node: wall 

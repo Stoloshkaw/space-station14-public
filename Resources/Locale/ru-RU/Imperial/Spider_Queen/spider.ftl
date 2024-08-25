@@ -94,8 +94,8 @@ spider-spawn-egg-ghost = Яйцо паука призрака
 spider-spawn-egg-shooter = Яйцо паука стрелка
 
 
-spider-spawn-kristal = Создать кристал
-spider-spawn-kristal-desc = Кристалл, который служит подсветкой для пауков.
+spider-spawn-kristal = Создать осколок кристалла
+spider-spawn-kristal-desc = Осколок, который служит подсветкой для пауков.
 
 
 
@@ -109,7 +109,9 @@ spider-spawn-wall3 = Создать прочную стену
 
 ent-ActionSpiderWeb = Пустить паутину
     .desc = Создаёт паутину, которая замедляет вашу добычу. 
-
+	
+ent-ShardCrystalBlueXeno = осколок синего хрусталя	
+    .desc = Маленький кусочек хрусталя.  
 
 spider-spawn-smallspider = Выпустить паучат
 spider-spawn-smallspider-desc = Выпускает трёх маленьких пауков, которые атакуют вашу добычу. Пауки исчезают через 20 секунд.

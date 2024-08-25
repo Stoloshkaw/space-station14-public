@@ -21,6 +21,7 @@ analysis-console-info-edges = КРАЯ: { $edges }
 analysis-console-info-value = ТЕКУЩАЯ_ЦЕННОСТЬ: { $value }
 
 analysis-console-info-scanner = Сканирование...
+analysis-console-info-scanner-paused = Пауза.
 analysis-console-progress-text = {$seconds ->
         [one] T-{$seconds} секунда
         [few] T-{$seconds} секунды
