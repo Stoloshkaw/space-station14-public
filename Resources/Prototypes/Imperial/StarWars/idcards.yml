@@ -3,6 +3,7 @@
   id: ImperialVaderIDCard
   name: Vader ID card
   description: an ID card used by a Sith lord from a galaxy far, far away
+  suffix: империя
   components:
   - type: Sprite
     sprite: Imperial/StarWars/idcards.rsi
@@ -29,6 +30,7 @@
   id: ImperialStormtrooperIDCard
   name: Stormtrooper ID card
   description: an ID card used by Imperial stormtroopers in a galaxy far, far away
+  suffix: империя
   components:
   - type: Sprite
     sprite: Imperial/StarWars/idcards.rsi
