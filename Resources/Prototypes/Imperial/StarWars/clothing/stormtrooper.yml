@@ -2,7 +2,7 @@
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitStormtrooper
   name: stormtrooper hardsuit
-  suffix: империя
+  suffix: звёздные войны, империя
   description: a classic stormtrooper suit! Helmet included
   components:
   - type: Item
@@ -40,7 +40,7 @@
   id: ClothingHeadHardsuitStormTrooper
   noSpawn: true
   name: stormtrooper hardsuit helmet
-  suffix: империя
+  suffix: звёздные войны, империя
   description: helmet with anti-guidance system
   components:
   - type: Item

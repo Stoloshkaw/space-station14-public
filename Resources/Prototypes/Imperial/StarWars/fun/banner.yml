@@ -2,7 +2,7 @@
   id: BannerStarWarsImperial
   parent: BannerBase
   name: The banner of the Empire
-  suffix: империя
+  suffix: звёздные войны, империя
   description: be proud of the Empire!
   components:
   - type: Sprite

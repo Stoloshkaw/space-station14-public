@@ -1,6 +1,6 @@
 - type: entity
   name: light blaster
-  suffix: империя
+  suffix: звёздные войны, империя
   parent: BaseWeaponBatterySmall
   id: WeaponStarWarsLaserBlaster
   description: it shoots at almost light speed

@@ -2,7 +2,7 @@
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitVader
   name: Vader hardsuit
-  suffix: империя
+  suffix: звёздные войны, империя
   description: he exudes a dark power
   components:
   - type: Item
@@ -40,7 +40,7 @@
   id: ClothingHeadHardsuitVader
   noSpawn: true
   name: Vader helmet
-  suffix: империя
+  suffix: звёздные войны, империя
   description: looking at him makes you feel scared
   components:
   - type: Item
@@ -59,7 +59,7 @@
   parent: ClothingNeckBase
   id: ClothingImperialVaderCloak
   name: the black cloak
-  suffix: империя
+  suffix: звёздные войны, империя
   description: black as the forces of darkness
   components:
   - type: Item

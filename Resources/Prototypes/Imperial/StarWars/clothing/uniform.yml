@@ -2,7 +2,7 @@
   parent: ClothingUniformBase
   id: ClothingImperialBlackSithUniform
   name: black turtleneck
-  suffix: империя
+  suffix: звёздные войны, империя
   description: a black turtleneck. For the real Sith
   components:
   - type: Item
